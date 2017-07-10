@@ -1,0 +1,6 @@
+%sparkr
+
+# Set this "com.databricks:spark-csv_2.10:1.2.0" to Interpreter property, "zeppelin.sparkr.packages"
+
+flights_df <- read.df(sqlContext,'/etc/nycflights13.csv', 'com.databricks.spark.csv', header='true')
+print(names(flights_df))
