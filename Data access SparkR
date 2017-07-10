@@ -1,0 +1,6 @@
+%sparkr
+
+localDF <- data.frame(name <- c("a", "b", "c"), age <- c(18, 20, 22))
+df <- createDataFrame(sqlContext, localDF)
+printSchema(df)
+print(is.data.frame(df))
