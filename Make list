@@ -1,0 +1,10 @@
+%sparkr
+faithful_df <- createDataFrame(sqlContext, faithful)
+show(first(faithful_df))
+showDF(faithful_df)
+
+# New more R-like APIs in Spark 1.5.0..
+
+showDF(faithful_df[faithful_df$eruptions > 3.0, 2])
+
+showDF(SparkR::transform(faithful_df, waiting2 = faithful_df$waiting / 2))
