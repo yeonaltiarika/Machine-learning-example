@@ -1,0 +1,4 @@
+%sh
+cd /etc
+rm -f nycflights13.csv
+wget -nv https://s3-us-west-2.amazonaws.com/sparkr-data/nycflights13.csv
